@@ -8,13 +8,19 @@ class Persona(models.Model):
     nombre = models.CharField(max_length=80)
     paterno = models.CharField(max_length=80)
     materno = models.CharField(max_length=80)
+    def __str__(self):
+        return self.nombre
 
 class Adscripcion(models.Model):
     unidad = models.CharField(max_length=4)
     subunidad = models.CharField(max_length=4)
     nombre = models.CharField(max_length=100)
+    def __str__(self):
+        return self.nombre
 
 class Plaza(models.Model):
     clave = models.CharField(max_length=8, primary_key=True)
     nivel = models.CharField(max_length=4)
     descripcion = models.CharField(max_length=100)
+    def __str__(self):
+        return self.descripcion

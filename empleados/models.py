@@ -10,6 +10,9 @@ class Empleado(models.Model):
     numero_empleado = models.CharField(max_length=10)
     datos = models.ForeignKey('catalogos.Persona')
     fecha_ingreso = models.DateTimeField()
+    tipo_empleado = models.CharField(max_length=5, choices = TIPOS_EMPLEADOS, default='CONF')
     clave_plaza = models.ForeignKey('catalogos.plaza')
     adscripcion = models.ForeignKey('catalogos.Adscripcion')
     puesto = models.CharField(max_length=40)
+    def __str__(self):
+        return self.datos
