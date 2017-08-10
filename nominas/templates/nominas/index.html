@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load bootstrap3 %}
+{% block title %} Nominas {% endblock %}
+{% block content %}
+{% bootstrap_button "Nuevo proceso de nomina" button_type="link" href="new" button_class="btn-primary" %}
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Quincena</th>
+      <th>Descripción</th>
+      <th>Emisión</th>
+      <th>Estado</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+{% endblock %}
+
