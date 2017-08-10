@@ -15,4 +15,4 @@ class Empleado(models.Model):
     adscripcion = models.ForeignKey('catalogos.Adscripcion')
     puesto = models.CharField(max_length=40)
     def __str__(self):
-        return self.datos
+        return self.datos.nombre

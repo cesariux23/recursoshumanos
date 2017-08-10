@@ -9,7 +9,7 @@ class Persona(models.Model):
     paterno = models.CharField(max_length=80)
     materno = models.CharField(max_length=80)
     def __str__(self):
-        return self.nombre
+        return self.nombre + " " + self.paterno + " " + self.materno
 
 class Adscripcion(models.Model):
     unidad = models.CharField(max_length=4)

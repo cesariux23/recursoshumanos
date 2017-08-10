@@ -14,12 +14,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-      {% if mudulo ="empleados" %}
-          <li class="active">{% url "nominas" %}</li>
-          <li><a href="#">Link</a></li>
-      
-      {% endif %}
-        
+        <li><a href={% url 'index_nominas' %}>Nominas</a></li>
+        <li><a href={% url 'index_empleados' %}>Empleados</a></li>
+        <li><a href="#">Link</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">

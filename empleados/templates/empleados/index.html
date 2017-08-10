@@ -3,3 +3,47 @@
 {% block title %}
     Empleados
 {% endblock title %}
+{% block content %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                No. empleado
+            </th>
+            <th>
+                Nombre
+            </th>
+            <th>
+                Adscripción
+            </th>
+            <th>
+                Puesto
+            </th>
+            <th>
+                Acciones
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for empleado in empleados %}
+            <tr>
+                <td>
+                    {{ empleado.numero_empleado }}
+                </td>
+                <td>
+                    {{ empleado.datos }}
+                </td>
+                <td>
+                    {{ empleado.adscripcion }}
+                </td>
+                <td>
+                    {{ empleado.puesto }}
+                </td>
+                <td>
+                    <a class="btn" href="#"> Editar </a>
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
